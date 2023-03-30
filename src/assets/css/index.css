@@ -20,6 +20,7 @@ body {
 }
 
 .todoList .adding {
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +45,7 @@ body {
 }
 
 .todoList .list .listItem {
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: #171616;
   display: -webkit-box;
   display: -ms-flexbox;

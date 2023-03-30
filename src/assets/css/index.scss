@@ -19,6 +19,7 @@ body {
     margin: 20px auto;
 
     .adding {
+        margin-bottom: 20px;
         display: flex;
         background-color: lightgray;
         @extend %rounded-borderless-with-padding-10;
@@ -44,7 +45,7 @@ body {
 
     .list {
         .listItem {
-            margin-top: 20px;
+            margin-top: 10px;
             background-color: rgb(23, 22, 22);
             display: flex;
             align-items: center;
