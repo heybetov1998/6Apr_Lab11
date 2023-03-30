@@ -1,0 +1,72 @@
+.todoList .adding, .todoList .adding .add, .todoList .adding #AddButton, .todoList .list .listItem, .todoList .list .listItem .deleteButton {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+body {
+  background-color: #242323;
+}
+
+.notFound {
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.todoList {
+  width: 70%;
+  margin: 20px auto;
+}
+
+.todoList .adding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: lightgray;
+}
+
+.todoList .adding .add {
+  width: 90%;
+  outline: none;
+}
+
+.todoList .adding #AddButton {
+  width: 10%;
+  margin-left: 10px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.todoList .adding #AddButton:hover {
+  background-color: darkgreen;
+}
+
+.todoList .list .listItem {
+  margin-top: 20px;
+  background-color: #171616;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todoList .list .listItem .itemText {
+  width: 90%;
+  color: white;
+}
+
+.todoList .list .listItem .deleteButton {
+  width: 10%;
+  color: white;
+  cursor: pointer;
+  background-color: red;
+}
+
+.todoList .list .listItem .deleteButton:hover {
+  background-color: darkred;
+}
+/*# sourceMappingURL=index.css.map */
