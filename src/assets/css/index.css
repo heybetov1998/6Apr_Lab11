@@ -61,6 +61,7 @@ body {
 
 .todoList .list .listItem .deleteButton {
   width: 10%;
+  margin-left: 10px;
   color: white;
   cursor: pointer;
   background-color: red;

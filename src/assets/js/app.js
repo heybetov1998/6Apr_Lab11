@@ -1,7 +1,6 @@
 //HTML elements
 const addButton = document.getElementById("AddButton");
 const todoInput = document.getElementById("TodoInput");
-const deleteButtons = document.getElementsByClassName("deleteButton");
 const list = document.getElementById("List");
 
 //Variables
@@ -42,7 +41,7 @@ const deleteTodo = (id) => {
 
 const renderList = () => {
     if (todoList.length === 0) {
-        list.innerHTML = `<h1 class="notFound">No items found</h1>`;
+        list.innerHTML = `<h1 class="notFound">No items added</h1>`;
     } else {
         list.innerHTML = todoList
             .map(
@@ -61,11 +60,3 @@ renderList();
 
 //Add todo
 addButton.onclick = addTodo;
-
-//Delete todo
-Array.from(deleteButtons).forEach((button) => {
-    button.onclick = () => {
-        const id = parseInt(button.id);
-        deleteTodo(id);
-    };
-});
