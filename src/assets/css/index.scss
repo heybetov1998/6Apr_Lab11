@@ -51,9 +51,28 @@ body {
             align-items: center;
             @extend %rounded-borderless-with-padding-10;
 
+            &.isDone {
+                background-color: grey;
+                .itemText {
+                    text-decoration: line-through;
+                }
+            }
+
             .itemText {
-                width: 90%;
+                width: 75%;
                 color: white;
+            }
+            .markAsDone {
+                width: 15%;
+                margin-left: 10px;
+                color: white;
+                cursor: pointer;
+                background-color: rgb(69, 69, 254);
+                @extend %rounded-borderless-with-padding-10;
+
+                &:hover {
+                    background-color: darkblue;
+                }
             }
             .deleteButton {
                 width: 10%;

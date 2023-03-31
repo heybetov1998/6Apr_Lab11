@@ -4,6 +4,7 @@ const todoInput = document.getElementById("TodoInput");
 const list = document.getElementById("List");
 
 //Variables
+const listItems = [];
 const todoList = [];
 let id = 0;
 
@@ -23,11 +24,21 @@ const addTodo = () => {
     const newTodo = {
         id: ++id,
         text: getInputValue(),
+        isDone: false,
     };
 
     todoList.push(newTodo);
     todoInput.value = "";
     renderList();
+};
+
+const markAsDone = (id, ev) => {
+    const index = todoList.findIndex((item) => item.id === id);
+
+    if (index === -1) return false;
+
+    ev.target.parentNode.classList.toggle("isDone");
+    todoList[index].isDone = !todoList[index].isDone;
 };
 
 const deleteTodo = (id) => {
@@ -45,9 +56,14 @@ const renderList = () => {
     } else {
         list.innerHTML = todoList
             .map(
-                (item) => `<div class="listItem">
+                (item) => `<div class="listItem ${item.isDone ? "isDone" : ""}">
             <p class="itemText">${item.text}</p>
-            <button id="${item.id}" class="deleteButton" onclick="deleteTodo(${item.id})">Delete</button>
+            <button class="markAsDone" onclick="markAsDone(${
+                item.id
+            },event)">Mark as done</button>
+            <button id="${item.id}" class="deleteButton" onclick="deleteTodo(${
+                    item.id
+                })">Delete</button>
         </div>`
             )
             .join("");

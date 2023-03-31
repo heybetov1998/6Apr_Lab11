@@ -1,4 +1,4 @@
-.todoList .adding, .todoList .adding .add, .todoList .adding #AddButton, .todoList .list .listItem, .todoList .list .listItem .deleteButton {
+.todoList .adding, .todoList .adding .add, .todoList .adding #AddButton, .todoList .list .listItem, .todoList .list .listItem .markAsDone, .todoList .list .listItem .deleteButton {
   padding: 10px;
   border-radius: 10px;
   border: none;
@@ -55,9 +55,29 @@ body {
           align-items: center;
 }
 
+.todoList .list .listItem.isDone {
+  background-color: grey;
+}
+
+.todoList .list .listItem.isDone .itemText {
+  text-decoration: line-through;
+}
+
 .todoList .list .listItem .itemText {
-  width: 90%;
+  width: 75%;
   color: white;
+}
+
+.todoList .list .listItem .markAsDone {
+  width: 15%;
+  margin-left: 10px;
+  color: white;
+  cursor: pointer;
+  background-color: #4545fe;
+}
+
+.todoList .list .listItem .markAsDone:hover {
+  background-color: darkblue;
 }
 
 .todoList .list .listItem .deleteButton {
