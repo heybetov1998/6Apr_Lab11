@@ -32,13 +32,13 @@ const addTodo = () => {
     renderList();
 };
 
-const markAsDone = (id, ev) => {
+const markAsDone = (id) => {
     const index = todoList.findIndex((item) => item.id === id);
 
     if (index === -1) return false;
 
-    ev.target.parentNode.classList.toggle("isDone");
     todoList[index].isDone = !todoList[index].isDone;
+    renderList();
 };
 
 const deleteTodo = (id) => {
@@ -60,7 +60,7 @@ const renderList = () => {
             <p class="itemText">${item.text}</p>
             <button class="markAsDone" onclick="markAsDone(${
                 item.id
-            },event)">Mark as done</button>
+            })">Mark as done</button>
             <button id="${item.id}" class="deleteButton" onclick="deleteTodo(${
                     item.id
                 })">Delete</button>
