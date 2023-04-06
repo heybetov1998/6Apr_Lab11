@@ -21,6 +21,7 @@
                                 type="text"
                                 class="form-control"
                                 id="productName"
+                                placeholder="Product name"
                             />
                         </div>
                         <div class="mb-1">
@@ -31,6 +32,7 @@
                                 type="text"
                                 class="form-control"
                                 id="productPrice"
+                                placeholder="Product price"
                             />
                         </div>
                         <div class="mb-1">
@@ -41,63 +43,32 @@
                                 type="text"
                                 class="form-control"
                                 id="imageSrc"
+                                placeholder="Image link"
                             />
                         </div>
-                        <button id="addNewProduct" class="btn btn-success w-100 mt-3">
+                        <button id="addNewProduct" class="btn btn-success w-100 mt-2">
                             Add new product
                         </button>
                     </div>
                     <div class="box rounded-2 shadow shadow-sm p-3 mb-3">
                         <div class="mb-1">
                             <label for="productName" class="form-label"
-                                >Product name</label
+                                >Search</label
                             >
                             <input
                                 type="text"
                                 class="form-control"
-                                id="productName"
+                                id="search"
+                                placeholder="Search..."
                             />
-                        </div>
-                        <div class="mb-1">
-                            <label for="productPrice" class="form-label"
-                                >Price</label
-                            >
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="productPrice"
-                            />
-                        </div>
-                        <div class="mb-1">
-                            <label for="imageSrc" class="form-label"
-                                >Image link</label
-                            >
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="imageSrc"
-                            />
+                            <button id="searchButton" class="btn btn-warning w-100 mt-2">Search</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-9 mt-4">
                     <h1 class="text-white">Products</h1>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mt-4 shadow shadow-sm">
-                                <img
-                                    src="./src/assets/images/prod1.jpg"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">Product 1</h5>
-                                    <p class="card-text">
-                                        Price: <strong>10$</strong>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="products" class="row">
+                        <!-- PRODUCTS DYNAMICALLY HERE -->
                     </div>
                 </div>
             </div>
