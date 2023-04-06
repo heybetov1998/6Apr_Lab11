@@ -4,12 +4,104 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./src/assets/css/general.css" />
+        <link rel="stylesheet" href="./src/assets/css/bootstrap.css" />
         <link rel="stylesheet" href="./src/assets/css/index.css" />
-        <title>Todo list app</title>
+        <title>Filtering app</title>
     </head>
     <body>
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mt-4">
+                    <div class="box rounded-2 shadow shadow-sm p-3 mb-3">
+                        <div class="mb-1">
+                            <label for="productName" class="form-label"
+                                >Product name</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="productName"
+                            />
+                        </div>
+                        <div class="mb-1">
+                            <label for="productPrice" class="form-label"
+                                >Price</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="productPrice"
+                            />
+                        </div>
+                        <div class="mb-1">
+                            <label for="imageSrc" class="form-label"
+                                >Image link</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="imageSrc"
+                            />
+                        </div>
+                        <button id="addNewProduct" class="btn btn-success w-100 mt-3">
+                            Add new product
+                        </button>
+                    </div>
+                    <div class="box rounded-2 shadow shadow-sm p-3 mb-3">
+                        <div class="mb-1">
+                            <label for="productName" class="form-label"
+                                >Product name</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="productName"
+                            />
+                        </div>
+                        <div class="mb-1">
+                            <label for="productPrice" class="form-label"
+                                >Price</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="productPrice"
+                            />
+                        </div>
+                        <div class="mb-1">
+                            <label for="imageSrc" class="form-label"
+                                >Image link</label
+                            >
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="imageSrc"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 mt-4">
+                    <h1 class="text-white">Products</h1>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mt-4 shadow shadow-sm">
+                                <img
+                                    src="./src/assets/images/prod1.jpg"
+                                    class="card-img-top"
+                                    alt="..."
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">Product 1</h5>
+                                    <p class="card-text">
+                                        Price: <strong>10$</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="./src/assets/js/app.js"></script>
     </body>
 </html>
