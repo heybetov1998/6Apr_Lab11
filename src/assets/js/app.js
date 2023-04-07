@@ -10,27 +10,27 @@ let id = 4;
 const DUMMY_PRODUCTS = [
     {
         id: 1,
-        name: "Product 1",
+        name: "Fotoaparat",
         src: "src/assets/images/prod1.jpg",
-        price: 10,
+        price: 30,
     },
     {
         id: 2,
-        name: "Product 2",
+        name: "Qulaqlıq",
         src: "src/assets/images/prod2.jpeg",
-        price: 10,
+        price: 20,
     },
     {
         id: 3,
-        name: "Product 3",
+        name: "Ağıllı saat",
         src: "src/assets/images/prod3.jpeg",
-        price: 10,
+        price: 40,
     },
     {
         id: 4,
-        name: "Product 4",
+        name: "Su qabı",
         src: "src/assets/images/prod4.webp",
-        price: 10,
+        price: 50,
     },
 ];
 
@@ -144,10 +144,20 @@ const search = (ev) => {
 
     if (!inputValue) {
         render(DUMMY_PRODUCTS);
+        return false;
     }
 
-    console.log(inputValue);
-    // DUMMY_PRODUCTS.filter();
+    const filterFunc = (prod) => Object.entries(prod).some(getFilteredEntry);
+
+    const getFilteredEntry = (entry) => {
+        if (entry[0] !== "name") return false;
+
+        if (entry[1].toLowerCase().includes(inputValue)) return entry;
+    };
+
+    const filteredArr = DUMMY_PRODUCTS.filter(filterFunc);
+
+    render(filteredArr);
 };
 
 addButton.addEventListener("click", addNewProduct);
