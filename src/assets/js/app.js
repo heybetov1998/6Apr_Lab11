@@ -37,7 +37,7 @@ const render = (productArray) => {
     products.innerHTML = "";
 
     if (productArray.length === 0) {
-        products.innerHTML = `<h1 class="text-danger">No product found</h1>`;
+        products.innerHTML = `<h1 class="text-danger mt-5">No product found</h1>`;
         return false;
     }
 
