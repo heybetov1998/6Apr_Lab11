@@ -53,7 +53,7 @@ const createProduct = (product) => {
 const createProductCardParentElement = (product) => {
     const colDiv = document.createElement("div");
 
-    colDiv.classList.add("col-md-4");
+    colDiv.classList.add("col-md-4", "d-flex", "align-items-stretch");
 
     colDiv.appendChild(createProductCardElement(product));
 
