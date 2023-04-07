@@ -4,7 +4,6 @@ const priceInput = document.querySelector("#productPrice");
 const linkInput = document.querySelector("#imageSrc");
 const addButton = document.querySelector("#addNewProduct");
 const searchInput = document.querySelector("#search");
-// const searchButton = document.querySelector("#searchButton");
 
 let id = 4;
 const DUMMY_PRODUCTS = [
@@ -36,6 +35,11 @@ const DUMMY_PRODUCTS = [
 
 const render = (productArray) => {
     products.innerHTML = "";
+
+    if (productArray.length === 0) {
+        products.innerHTML = `<h1 class="text-danger">No product found</h1>`;
+        return false;
+    }
 
     for (const product of productArray) {
         createProduct(product);
