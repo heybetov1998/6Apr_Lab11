@@ -153,10 +153,10 @@ const search = (ev) => {
 
     const filterFunc = (prod) => Object.entries(prod).some(getFilteredEntry);
 
-    const getFilteredEntry = (entry) => {
+    const getFilteredEntry = (entry) => {   
         if (entry[0] !== "name") return false;
 
-        if (entry[1].toLowerCase().includes(inputValue)) return entry;
+        if (entry[1].toLowerCase().includes(inputValue)) return true;
     };
 
     const filteredArr = DUMMY_PRODUCTS.filter(filterFunc);
