@@ -3,6 +3,8 @@ const nameInput = document.querySelector("#productName");
 const priceInput = document.querySelector("#productPrice");
 const linkInput = document.querySelector("#imageSrc");
 const addButton = document.querySelector("#addNewProduct");
+const searchInput = document.querySelector("#search");
+// const searchButton = document.querySelector("#searchButton");
 
 let id = 4;
 const DUMMY_PRODUCTS = [
@@ -32,10 +34,10 @@ const DUMMY_PRODUCTS = [
     },
 ];
 
-const render = () => {
+const render = (productArray) => {
     products.innerHTML = "";
 
-    for (const product of DUMMY_PRODUCTS) {
+    for (const product of productArray) {
         createProduct(product);
     }
 };
@@ -126,11 +128,29 @@ const addNewProduct = () => {
         price: priceInput.value === "" ? 0 : +priceInput.value,
     });
 
-    render();
+    render(DUMMY_PRODUCTS);
 };
 
-const search = () => {};
+const getInputValue = (ev) => {
+    if (ev.target.value.trim() === "") {
+        return false;
+    }
+
+    return ev.target.value.trim();
+};
+
+const search = (ev) => {
+    const inputValue = getInputValue(ev);
+
+    if (!inputValue) {
+        render(DUMMY_PRODUCTS);
+    }
+
+    console.log(inputValue);
+    // DUMMY_PRODUCTS.filter();
+};
 
 addButton.addEventListener("click", addNewProduct);
+searchInput.addEventListener("input", search);
 
-render();
+render(DUMMY_PRODUCTS);
